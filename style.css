@@ -310,3 +310,16 @@ body{
     font-size: 44px;
   }
 }
+.form-status{
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-status.success{
+  color: green;
+}
+
+.form-status.error{
+  color: red;
+}

@@ -35,7 +35,7 @@
       <div class="socials">
         <a href="mailto:shlokrathi.29@gmail.com" target="_blank">Email</a>
         <a href="https://linkedin.com/in/shlok-rathi" target="_blank">LinkedIn</a>
-        <a href="#" target="_blank">GitHub</a>
+        <a href="https://github.com/ShlokRathi29" target="_blank">GitHub</a>
       </div>
     </div>
   </section>
@@ -151,18 +151,62 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <h2 class="section-title">CONTACT</h2>
-    <p class="section-sub">Let’s work together</p>
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <h2 class="section-title">CONTACT</h2>
+  <p class="section-sub">Let’s work together</p>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn primary">SEND MESSAGE</button>
-    </form>
-  </section>
+  <form id="contactForm" class="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="btn primary" id="sendBtn">SEND MESSAGE</button>
+    <p id="formStatus" class="form-status"></p>
+  </form>
+</section>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  // IMPORTANT: Add your EmailJS Public Key here
+  emailjs.init("CzD-hq0KfEs0_ZsV4");
+
+  const form = document.getElementById("contactForm");
+  const statusText = document.getElementById("formStatus");
+  const sendBtn = document.getElementById("sendBtn");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = "SENDING...";
+    statusText.textContent = "";
+
+    const params = {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_0vjozfn", "YOUR_TEMPLATE_ID", params)
+      .then(() => {
+        statusText.textContent = "✅ Message sent successfully!";
+        statusText.className = "form-status success";
+        form.reset();
+      })
+      .catch((error) => {
+        statusText.textContent = "❌ Failed to send. Try again.";
+        statusText.className = "form-status error";
+        console.error("EmailJS Error:", error);
+      })
+      .finally(() => {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "SEND MESSAGE";
+      });
+  });
+</script>
 
   <!-- FOOTER -->
   <footer class="footer">
