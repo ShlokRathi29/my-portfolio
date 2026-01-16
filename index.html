@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shlok Rathi | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="brand">SR.</div>
+    <nav class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- HERO (NO PHOTO) -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-sub">Hi, I am</p>
+      <h1 class="hero-title">Shlok Rathi</h1>
+      <p class="hero-role">Information Technology Undergraduate</p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#about">ABOUT ME</a>
+        <a class="btn outline" href="#projects">PROJECTS</a>
+      </div>
+
+      <div class="socials">
+        <a href="mailto:shlokrathi.29@gmail.com" target="_blank">Email</a>
+        <a href="https://linkedin.com/in/shlok-rathi" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <h2 class="section-title">ABOUT</h2>
+
+    <p class="about-text">
+      I’m an Information Technology undergraduate with hands-on experience building and shipping full-stack
+      web applications using JavaScript, React, Node.js, and Python. I enjoy solving real-world problems through
+      user-centric design, scalable systems, and iterative development.
+    </p>
+
+    <div class="about-meta">
+      <div class="meta-box">
+        <h3>Location</h3>
+        <p>Buldhana, Maharashtra</p>
+      </div>
+      <div class="meta-box">
+        <h3>Email</h3>
+        <p>shlokrathi.29@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="about-actions">
+      <a class="btn primary" href="#contact">CONTACT</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <h2 class="section-title">SKILLS</h2>
+    <p class="section-sub">Technologies I work with</p>
+
+    <div class="skills-grid">
+      <div class="skill">JavaScript</div>
+      <div class="skill">React.js</div>
+      <div class="skill">Next.js</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">Python</div>
+      <div class="skill">Java</div>
+      <div class="skill">C</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Git/GitHub</div>
+      <div class="skill">Postman</div>
+      <div class="skill">VS Code</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <h2 class="section-title">PROJECTS</h2>
+    <p class="section-sub">Selected work</p>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-thumb">PROJECT</div>
+        <h3>Campus Event Management Platform</h3>
+        <p>
+          A full-stack platform for managing college events: event creation, online registrations, QR attendance,
+          and certificate generation.
+        </p>
+        <div class="tags">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>QR</span>
+          <span>Full-Stack</span>
+        </div>
+        <div class="project-actions">
+          <a href="#" class="btn small outline">Live</a>
+          <a href="#" class="btn small primary">Code</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">PROJECT</div>
+        <h3>E-Waste Management System</h3>
+        <p>
+          Hackathon project: AI-assisted platform to identify e-waste items and estimate real-time pricing to promote
+          recycling.
+        </p>
+        <div class="tags">
+          <span>Python</span>
+          <span>ML</span>
+          <span>UI</span>
+        </div>
+        <div class="project-actions">
+          <a href="#" class="btn small outline">Demo</a>
+          <a href="#" class="btn small primary">Code</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">PROJECT</div>
+        <h3>More Projects Coming</h3>
+        <p>
+          I keep building new projects while learning advanced technologies and best practices.
+          I’ll add them here regularly.
+        </p>
+        <div class="tags">
+          <span>Learning</span>
+          <span>Build</span>
+          <span>Ship</span>
+        </div>
+        <div class="project-actions">
+          <a href="#contact" class="btn small primary">Contact</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="section-sub">Let’s work together</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn primary">SEND MESSAGE</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Shlok Rathi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
